@@ -1,0 +1,11 @@
+* {
+    border : 1px solid rgb(218, 55, 55);
+  }
+
+#nomJoueur{
+margin-left: 10px;
+}
+
+/*npm install*/
+/* node C:\Users\cestibal\AppData\Roaming\npm\ng serve*/
+/* node C:\Users\cestibal\AppData\Roaming\npm\node_modules\@angular\cli\bin\ng serve*/
