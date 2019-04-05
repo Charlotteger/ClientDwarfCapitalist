@@ -1,3 +1,101 @@
-<p>
-  product works!
-</p>
+<div id="conteneur">
+
+  <div id="partieGauche">
+    <ul>
+      <li>
+        <h3 class="nomProduit">{{product.name}}</h3>
+      </li>
+      <li>quantité : {{product.quantite}}</li>
+      <li>
+        <img (click)="startProduction()" class="img_round" [attr.src]="'http://localhost:8080/'+product.logo"/>
+      </li>
+      <li>
+        <button type="button" class="boutonBuy" (click)="buyProduct()"> Buy </button>
+      </li>
+      <li>
+        <label for="cout">Coût :</label>
+        <span id="cout" [innerHTML] ="product.cout | bigvalue"></span>
+      </li>
+      </ul>
+  </div>
+
+  <div id="partieDroite">
+      <ul>
+          <li><div class="progress" #bar></div></li>
+          <li>temps restant : {{product.timeleft}}</li>
+          <li>
+              <label for="gain">Gain : </label>
+              <span id="gain" [innerHTML] ="product.revenu | bigvalue"></span>
+          </li>
+          <li *ngIf="product.managerUnlocked">Le manager travaille</li>
+      </ul>
+  </div>
+
+
+
+
+      <!--
+      <li *ngFor="let pallier of product.palliers.pallier">
+          {{pallier.name}}
+          <img [attr.src]="pallier.logo"/>
+          {{pallier.seuil}}
+          {{pallier.idcible}}
+          {{pallier.ratio}}
+          {{pallier.typeratio}}
+          {{pallier.unlocked}}
+      </li>
+    -->
+
+</div>
+
+
+
+<style>
+
+  #partieDroite{
+    margin-top: 50px;
+  }
+
+
+
+  .boutonBuy{
+  margin-top: 15px;
+  background-color: rgb(255, 167, 35);
+  border: none;
+  color: black;
+  padding: 10px 42px;
+  font-size: 15px;
+  border-radius: 10%;
+}
+  .boutonBuy:hover{
+  background-color: rgb(197, 121, 6);
+}
+
+  .img_round{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%
+}
+
+.nomProduit{
+  color: rgb(248, 143, 24);
+}
+
+#conteneur{
+  height: 300px;
+  width: 310px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  background-color: rgba(158, 116, 52, 0.7);
+
+}
+
+li{
+  list-style-type: none;
+}
+
+
+</style>

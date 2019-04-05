@@ -1,11 +1,111 @@
-* {
-    border : 1px solid rgb(218, 55, 55);
-  }
+
+/* PROBLEMES :
+
+
+1) taille body  min-height:  ;
+
+
+2)  VERIFIER VALEUR COUT (doit dépasse gain) product.component.ts
+3) probleme cout soustraitre money
+
+
+4) problème la production de produit ne se lance pas directement après avoir pris le manager
+calcScore() de product.component.ts (énoncé page 36)
+
+
+5) <span> New : s'affiche une fois quand il est débloqué même si après on repasse en dessous du prix
+
+
+*/
+
+
+@import url("https://fonts.googleapis.com/css?family=Ultra|Sniglet");
+
+html, body{
+  /*
+  https://www.vecteezy.com/vector-art/362468-mining-trolley-full-of-gold
+  */
+  background-image: url("image/background7.jpg");
+  font-family: 'Sniglet', cursive;
+  color: black;
+  /*
+  min-height: 120% ;
+  margin :0
+  padding:0
+  */
+
+}
+
+/*Header*/
+#header{
+  font-size: 15px;
+  background-color: #f5d43f;
+  margin-bottom: 50px;
+}
 
 #nomJoueur{
 margin-left: 10px;
 }
 
+img{
+  width: 100px;
+  height: 100px;
+}
+
+#worldname, #worldmoney, #nomJoueur, label{
+  margin-top: 40px;
+}
+
+#multiplicateur {
+  margin-top: 25px;
+  background-color: rgb(255, 167, 35);
+  border: none;
+  color: black;
+  padding: 15px 62px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 10%;
+}
+#multiplicateur:hover{
+  background-color: rgb(197, 121, 6);
+}
+
+/*Footer*/
+
+#footer{
+  background-color: #f5d43f;
+  text-align: center;
+}
+
+/*Managers*/
+.img_round{
+  width: 100px;
+  height: 100px;
+    border-radius: 30%
+  }
+
+.btnhire{
+  margin-top: 25px;
+  padding: 10px 20px;
+  border: 2px solid ;
+  border-color:  rgb(243, 213, 77);
+}
+.btnhire:hover{
+  background-color: rgb(243, 213, 77);
+}
+
+
 /*npm install*/
-/* node C:\Users\cestibal\AppData\Roaming\npm\ng serve*/
-/* node C:\Users\cestibal\AppData\Roaming\npm\node_modules\@angular\cli\bin\ng serve*/
+/* node C:\Users\cestibal\AppData\Roaming\npm\node_modules\@angular\cli\bin\ng serve
+
+node C:\Users\Pierre\Documents\A-Travail\ISIS\FIE4\DwarfCapitalist\node_modules\@angular\cli\bin\ng serve
+npm i @angular/http
+npm install progressbar.js --save
+npm install angular2-toaster --save
+npm install -g @angular/cli
+
+ouvrir git bash
+git commit -m "your msg"
+git push 
+*/
